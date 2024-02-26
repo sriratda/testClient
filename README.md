@@ -1,4 +1,4 @@
-**run server **
+**run server**
 server>  npm run dev
 
 **run front-end**
