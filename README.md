@@ -6,13 +6,13 @@
    password: 1234<br>
    account number: 123456780<br>
 
-***Run Back-end***
+***Run Back-end***<br>
 **cd** server<br>
 npm install express<br>
 npm run dev
 <br>
 <br>
-***Run Front-end***
+***Run Front-end***<br>
 **cd** front-end<br>
 npm install react-scripts<br>
 npm start
