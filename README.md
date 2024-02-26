@@ -1,5 +1,6 @@
-**run server**
-server>  npm run dev
 
-**run front-end**
-front-end>  npm start
+cd server
+npm run dev
+
+cd front-end
+npm start
