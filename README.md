@@ -8,7 +8,8 @@
 
 
 **cd** server<br>
-npm run dev
+> npm install express<br>
+> npm run dev
 <br>
 <br>
 <br>
