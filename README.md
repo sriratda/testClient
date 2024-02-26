@@ -1,8 +1,6 @@
 
-cd server
+cd server<br>
 npm run dev
-
-cd front-end
+<br>
+cd front-end<br>
 npm start
-This is the first line<br>
-This is the second line.
