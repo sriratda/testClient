@@ -8,10 +8,10 @@
 
 
 **cd** server<br>
-> npm install express<br>
-> npm run dev
-<br>
+npm install express<br>
+npm run dev
 <br>
 <br>
 **cd** front-end<br>
+npm install react-scripts<br>
 npm start
