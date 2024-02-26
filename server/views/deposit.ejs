@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+</head>
+
+<body>
+    <h1>Deposit Money</h1>
+    <div>
+        <p><strong>Username:</strong> <%= account.username %></p>
+        <p><strong>ID:</strong> <%= account.id %></p>
+        <p><strong>Balance:</strong> <%= account.balance %></p>
+    </div>
+    
+    <!-- Deposit Form -->
+    <form action="/account/deposit" method="POST">
+
+        <!-- Hidden input field to send the account ID -->
+        <input type="hidden" name="accountId" value="<%= account.username %>">
+        
+        <label for="amount">Amount to Deposit:</label>
+        <input type="number" id="amount" name="amount" required>
+        <button type="submit">Deposit</button>
+    </form>
+    <!-- Back button with token included -->
+    <a href="/profile?token=<%= token %>"><button>Back</button></a>
+
+</body>
+
+</html>

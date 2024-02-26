@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <h1>User Profile</h1>
+    <div>
+        <p><strong>Username:</strong> <%= account.username %></p>
+        <p><strong>ID:</strong> <%= account.id %></p>
+        <p><strong>Balance:</strong> <%= balance %></p>
+    </div>
+    <div>
+        <a href="/deposit?userId=<%= account.username %>&token=<%= token %>"><button>Deposit</button></a>
+        <a href="/withdraw?userId=<%= account.username %>&token=<%= token %>"><button>Withdraw</button></a>
+        <a href="/transfer?userId=<%= account.username %>&token=<%= token %>"><button>Transfer</button></a>
+        <a href="/accounts/<%= account.username %>/transactions?token=<%= token %>">
+            <button>Transaction History</button>
+        </a>
+        <a href="/login"><button>Logout</button></a> <!-- Add logout button -->
+    </div>
+</body>
+
+</html>

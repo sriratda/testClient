@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+</head>
+
+<body>
+    <h1>Transaction History</h1>
+    <div>
+        <p><strong>Account ID:</strong> <%= accountId %></p>
+    </div>
+    <div>
+        <table>
+            <caption>Transfer</caption>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>User</th>
+                    <th>Type</th>
+                    <th>Remain</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% transactions.forEach(transaction => { %>
+                <% if (transaction.type === 'Transfer') { %>
+                <tr>
+                    <td><%= transaction.timestamp %></td>
+                    <td><%= accountId %></td>
+                    <td><%= transaction.type %></td>
+                    <td><%= transaction.remain %></td>
+                    <td><%= transaction.accountId %></td>
+                    <td><%= transaction.amount %></td>
+                </tr>
+                <% } %>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Receive</caption>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>User</th>
+                    <th>Type</th>
+                    <th>Remain</th>
+                    <th>From</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% transactions.forEach(transaction => { %>
+                <% if (transaction.type === 'Receive') { %>
+                <tr>
+                    <td><%= transaction.timestamp %></td>
+                    <td><%= accountId %></td>
+                    <td><%= transaction.type %></td>
+                    <td><%= transaction.remain %></td>
+                    <td><%= transaction.accountId %></td>
+                    <td><%= transaction.amount %></td>
+                </tr>
+                <% } %>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <a href="/profile?token=<%= token %>"><button>Back</button></a>
+</body>
+
+</html>

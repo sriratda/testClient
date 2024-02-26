@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.App {
+  position: relative;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-area {
+  border-radius: 6px;
+  padding: 1rem;
+  position: absolute;
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffbd;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid #adadad;
+}
+
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input input {
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #adadad;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.logo {
+  width: 15rem;
+  margin: 0 auto 2rem;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.bg {
+  background-color: #5241BD;
+  height: 50vh;
+}
+
+.btn {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.btn button {
+  background-color: #5241BD;
+  padding: 0.7rem 1rem;
+  width: 7rem;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+
+.btn button:hover {
+  background-color: #fff;
+  color: #5241BD;
+  border-color: #5241BD;
+  transition: .5s;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.input-area i {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
