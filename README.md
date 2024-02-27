@@ -7,12 +7,14 @@
    account number: 123456780<br>
 
 ***Run Back-end***<br>
+(first terminal)
 **cd** server<br>
 npm install express<br>
 npm run dev
 <br>
 <br>
 ***Run Front-end***<br>
+(second terminal)
 **cd** front-end<br>
 npm install react-scripts<br>
 npm start
