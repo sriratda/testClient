@@ -16,9 +16,7 @@ app.set('view engine', 'ejs');
 // Connection URI
 const uri = 'mongodb+srv://tanaset:lskmgnorLDh8Ajhw@pramesystem.gj52ieg.mongodb.net/?retryWrites=true&w=majority&appName=prameSystem';// Change 'mydatabase' to your database name
 
-app.use(cors({
-  origin: 'http://localhost:3000/' // Replace with your React app's URL
-}));
+app.use(cors());
 
 mongoose.connect(uri)
   .then(() => console.log('MongoDB connection successful'))
