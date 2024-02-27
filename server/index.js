@@ -5,6 +5,7 @@ const authController = require('./controllers/authController'); // Import authCo
 const AccountModel = require('./models/Account');
 const viewRoutes = require('./routes/viewRoutes')
 const accountRoutes = require('./routes/accountRoutes')
+const cors = require("cors");
 
 // Initialize Express app
 const app = express();
@@ -15,6 +16,9 @@ app.set('view engine', 'ejs');
 // Connection URI
 const uri = 'mongodb+srv://tanaset:lskmgnorLDh8Ajhw@pramesystem.gj52ieg.mongodb.net/?retryWrites=true&w=majority&appName=prameSystem';// Change 'mydatabase' to your database name
 
+app.use(cors({
+  origin: 'https://test-client-ruby.vercel.app/' // Replace with your React app's URL
+}));
 
 mongoose.connect(uri)
   .then(() => console.log('MongoDB connection successful'))
