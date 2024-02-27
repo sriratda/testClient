@@ -9,7 +9,7 @@ function Withdraw() {
         event.preventDefault();
 
         // Retrieve the accountId from local storage
-        const accountId = localStorage.getItem(`${apiUrl}username`); // Assuming the accountId is stored as 'username' in local storage
+        const accountId = localStorage.getItem('username'); // Assuming the accountId is stored as 'username' in local storage
 
         if (!accountId) {
             alert("Your account ID is not available. Please log in again.");
@@ -17,7 +17,7 @@ function Withdraw() {
         }
 
         try {
-            const response = await fetch('/account/withdraw', {
+            const response = await fetch(`${apiUrl}account/withdraw`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

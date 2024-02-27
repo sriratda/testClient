@@ -10,7 +10,7 @@ function Deposit() {
         event.preventDefault();
 
         // Retrieve 'username' from local storage
-        const accountId = localStorage.getItem(`${apiUrl}username`);
+        const accountId = localStorage.getItem('username');
 
         console.log(accountId)
         // Check if username is not null or undefined
@@ -20,7 +20,7 @@ function Deposit() {
         }
 
         try {
-            const response = await fetch('/account/deposit', {
+            const response = await fetch(`${apiUrl}account/deposit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

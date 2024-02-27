@@ -17,7 +17,6 @@ function Home() {
                 // Handle the case when there is no token. Maybe redirect to login page.
                 return;
             }
-
             try {
                 const response = await fetch(`${apiUrl}profile`, {
                     headers: {

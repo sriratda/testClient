@@ -11,7 +11,7 @@ function Transfer() {
         event.preventDefault();
 
         // Retrieve 'accountId' (fromAccountId) from local storage
-        const fromAccountId = localStorage.getItem(`${apiUrl}username`);
+        const fromAccountId = localStorage.getItem('username');
         const toAccountId = destinationAccount;
 
         if (!fromAccountId) {
@@ -20,7 +20,7 @@ function Transfer() {
         }
 
         try {
-            const response = await fetch('/account/transfer', {
+            const response = await fetch(`${apiUrl}account/transfer`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
