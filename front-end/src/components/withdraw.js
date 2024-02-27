@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function Withdraw() {
     const [amount, setAmount] = useState('');
@@ -8,7 +9,7 @@ function Withdraw() {
         event.preventDefault();
 
         // Retrieve the accountId from local storage
-        const accountId = localStorage.getItem('username'); // Assuming the accountId is stored as 'username' in local storage
+        const accountId = localStorage.getItem(`${apiUrl}username`); // Assuming the accountId is stored as 'username' in local storage
 
         if (!accountId) {
             alert("Your account ID is not available. Please log in again.");

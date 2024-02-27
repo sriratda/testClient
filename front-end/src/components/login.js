@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../logo512.png';
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/login', {
+            const response = await fetch(`${apiUrl}login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

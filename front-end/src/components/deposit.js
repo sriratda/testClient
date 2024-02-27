@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 
 function Deposit() {
     const [amount, setAmount] = useState('');
@@ -8,7 +10,7 @@ function Deposit() {
         event.preventDefault();
 
         // Retrieve 'username' from local storage
-        const accountId = localStorage.getItem('username');
+        const accountId = localStorage.getItem(`${apiUrl}username`);
 
         console.log(accountId)
         // Check if username is not null or undefined

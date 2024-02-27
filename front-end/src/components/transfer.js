@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 
 function Transfer() {
     const [destinationAccount, setDestinationAccount] = useState('');
@@ -9,7 +11,7 @@ function Transfer() {
         event.preventDefault();
 
         // Retrieve 'accountId' (fromAccountId) from local storage
-        const fromAccountId = localStorage.getItem('username');
+        const fromAccountId = localStorage.getItem(`${apiUrl}username`);
         const toAccountId = destinationAccount;
 
         if (!fromAccountId) {
